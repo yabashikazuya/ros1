@@ -53,7 +53,7 @@ RUN adduser --uid ${UID} --disabled-password --gecos '' --shell /bin/bash ${USER
     chown -R ${USER_NAME}:${USER_NAME} /home/${USER_NAME} && \
     echo "%${username}    ALL=(ALL)   NOPASSWD:    ALL" >> /etc/sudoers.d/${USER_NAME} && \
     chmod 0440 /etc/sudoers.d/${USER_NAME}
-WORKDIR /home/noetic/
+WORKDIR /home/ros1/
 
 RUN echo "export PS1='\[\033[01;32m\]${USER_NAME}@${HOSTNAME}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '" >> /home/${USER_NAME}/.bashrc && \
     echo "source /opt/ros/noetic/setup.bash" >> /home/${USER_NAME}/.bashrc && \
