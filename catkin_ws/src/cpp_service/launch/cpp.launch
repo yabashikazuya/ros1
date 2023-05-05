@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="cpp_service" name="str_server" type="server_str" output="screen"/>
+</launch>
